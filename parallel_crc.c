@@ -18,12 +18,6 @@ uint8_t gencrc(uint8_t *data, size_t len)
     return crc;
 }
 
-int main(int argc, char *argv[]) {
-    char *fileName = argv[1];
-    FILE *file = fopen(fileName, "r");
-    if(file == NULL){
-        perror("Unable to open the file.\n");
-        exit(1);
-    }
-    char line[200];
-}
+
+
+
