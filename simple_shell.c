@@ -25,8 +25,7 @@ int main(){
             printf("bye\n");
             exit(0);
         }        
-        execute(finalString);
-        
+        execute(finalString);  
     }
 }
 void removeSpace(char *input, char **final){
@@ -43,7 +42,7 @@ void execute(char **args){
     else if(pid != 0) wait(NULL);
     else{
         int exec = execvp(args[0], args);
-        if(exec < 0) printf("unable to execute\n");
+        if(exec < 0) perror(0);
         exit(0);
     }
 }
