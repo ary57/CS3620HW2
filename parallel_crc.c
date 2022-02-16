@@ -27,6 +27,19 @@ uint8_t gencrc(uint8_t *data, size_t len)
 //     }
 // }
 
+void getFileNames(char *fileName, char *arrFiles[1000]){
+    FILE *theFile = fopen(fileName, "r");
+    char line[100];
+    
+    int index = 0; 
+    while(fgets(line, sizeof(line), theFile)){
+        char *token = strtok(line, "\n");
+        strcpy(toke, arrFiles[index])
+        index++;
+    }
+    fclose(theFile);
+}
+
 int main(int argc, char **argv){
     char **final;
     final = argv; 
