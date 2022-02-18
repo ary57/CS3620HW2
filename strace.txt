@@ -1,0 +1,24 @@
+1. The program that was executed are:
+    a. we run an "echo" command with the argument "hello world from strace"
+	because it is inside the prantheses of execve() system call which is responsible for exeuting the programs. 
+2. the argument that was passed in is "hello world from strace"
+3. file descriptor 1 is the program responsible for printing to the terminal. 
+   file descriptor 2 is responsible for printing errors to the terminal. 
+4. writing to 1 using 'echo' prints out the arguments to the screen 
+	
+5. the program prints out "hello world from strace" using echo, so I assume the output is "hello world from strace"
+	there are also other outputs such as execve(...) gives 0 and mmap gives a memory location but i'm not sure if i'd count those as 			outputs. 
+
+
+
+
+
+
+################## Notes form the man7.org site. ##############################
+st_mode = contains the file type and mode
+    S_FREG = is the file type constant of a regular file ??
+
+write(int fildes,const void *buf, size_t nbyte);
+    returns the size of the string(?) passed
+
+realized mistakes with print_args.c and 
